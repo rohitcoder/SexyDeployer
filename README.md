@@ -12,7 +12,7 @@ Deploy this tool on same server, where you are hosting your source code and enab
 ```bash
   $ git clone https://github.com/rohitcoder/SexyDeployer
   $ cd SexyDeployer
-  $ bin/activaate
+  $ bin/activate
   $ python3 -m ensurepip --default-pip
   $ pip3 install -r requirements.txt
   $ flask run
