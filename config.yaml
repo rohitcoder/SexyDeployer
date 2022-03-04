@@ -1,3 +1,3 @@
-PROJECT_PATH: '/Users/rohitcoder/Desktop/DS-Practice/'
-SLACK_STRING: 'https://hooks.slack.com/services/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'
+PROJECT_PATH: '/home/ubuntu/MyCoolApp/' # Your project source code location
+SLACK_WEBHOOK: 'https://hooks.slack.com/services/XXXXXX/YYYYYY/ZZZZZZZZ'  # Slack Webhook URL for getting alerts
 VERBOSE: 'enabled'

@@ -25,7 +25,7 @@ def SlackAlert(msg):
     """
     if VERBOSE == "enabled":
       msg = msg + " [" + time.strftime("%Y-%m-%d %H:%M:%S") + "]"
-      requests.post(config['SLACK_STRING'], data={"text": msg})
+      requests.post(config['SLACK_WEBHOOK'], data={"text": msg})
 
 @app.route("/webhook", methods=['POST'])
 def webhook():
