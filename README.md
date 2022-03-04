@@ -7,6 +7,7 @@ While working on one of project, i was in a sitatuion where i was in need up upd
 
 
 ## Installation
+Deploy this tool on same server, where you are hosting your source code and enable used Port number in your firewall. This will allow github to send commit push alerts to SexyDeployer.
 
 ```bash
   $ git clone https://github.com/rohitcoder/SexyDeployer
