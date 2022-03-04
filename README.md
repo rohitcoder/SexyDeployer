@@ -1,7 +1,7 @@
 
 # SexyDeployer - A simple and sexy continous deployment tool
 
-While working on one of project, i was in a sitatuion where i was in need up updating dev/prod server very frequently and that was frutrsated, i started looking at Jenkins, but it was taking a lot of time and you need to look at lot of youtube videos to get it working. SexyDeployer works on concept of webhooks and that webhook triggers all internal scripts to get your work done!
+While working on one of project, i was in a situation where i was in need up updating dev/prod server very frequently and that was frutrsated, i started looking at Jenkins, but it was taking a lot of time and you need to look at lot of youtube videos to get it working. SexyDeployer works on concept of webhooks and that webhook triggers all internal scripts to get your work done!
 
 
 
