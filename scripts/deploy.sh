@@ -5,6 +5,3 @@
     - $2: the second argument PROJECT_PATH, where you are storing your source code
     - $3: the third argument BRANCH, the branch you are deploying or triggered
 '
-// run node server.js with PROJECT_PATH
-cd $2
-npm start
