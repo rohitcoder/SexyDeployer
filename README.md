@@ -15,7 +15,7 @@ Deploy this tool on same server, where you are hosting your source code and enab
   $ source bin/activate
   $ python3 -m ensurepip --default-pip
   $ pip3 install -r requirements.txt
-  $ flask run
+  $ flask run --host=0.0.0.0
 ```
 
 After running above commands you'll get a URL in output something like this.
