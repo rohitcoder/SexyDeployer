@@ -1,4 +1,3 @@
-from django import conf
 from flask import Flask, jsonify, request
 import os, yaml, requests, time
 
