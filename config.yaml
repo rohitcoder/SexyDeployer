@@ -1,3 +1,4 @@
 PROJECT_PATH: '/home/ubuntu/MyCoolApp/' # Your project source code location
 SLACK_WEBHOOK: 'https://hooks.slack.com/services/XXXXXX/YYYYYY/ZZZZZZZZ'  # Slack Webhook URL for getting alerts
 VERBOSE: 'enabled'
+BRANCH_TO_USE: 'develop'

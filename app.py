@@ -1,3 +1,4 @@
+from django import conf
 from flask import Flask, jsonify, request
 import os, yaml, requests, time
 
@@ -31,17 +32,18 @@ def SlackAlert(msg):
 def webhook():
     payload = request.get_json()
     branch = payload['ref'].split('/')[-1]
-    ## parse github webhook payload response and get event type and branch name
-    SlackAlert("👀 A new commit has been detected to the {} branch, working on updating source code.".format(branch))
-    os.system('cd ' + PROJECT_PATH + ' && git pull origin ' + branch)
-    SlackAlert("🎉 The {} branch has been updated successfully.".format(branch))
-    SlackAlert("🛠 Executing the build script.")
-    ExecuteBashScript('build.sh', branch)
-    SlackAlert("🎉 The build script has been executed successfully.")
-    SlackAlert("🛠 Executing the deploy script.")
-    ExecuteBashScript('deploy.sh', branch)
-    SlackAlert("🎉 The deploy script has been executed successfully.")
-    return jsonify(payload)
+    if branch == config['BRANCH_TO_USE']:
+      ## parse github webhook payload response and get event type and branch name
+      SlackAlert("👀 A new commit has been detected to the {} branch, working on updating source code.".format(branch))
+      os.system('cd ' + PROJECT_PATH + ' && git pull origin ' + branch)
+      SlackAlert("🎉 The {} branch has been updated successfully.".format(branch))
+      SlackAlert("🛠 Executing the build script.")
+      ExecuteBashScript('build.sh', branch)
+      SlackAlert("🎉 The build script has been executed successfully.")
+      SlackAlert("🛠 Executing the deploy script.")
+      ExecuteBashScript('deploy.sh', branch)
+      SlackAlert("🎉 The deploy script has been executed successfully.")
+      return jsonify(payload)
     
 
 if __name__ == "__main__":
