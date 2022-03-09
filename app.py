@@ -42,7 +42,7 @@ def webhook():
       SlackAlert("🛠 Executing the deploy script.")
       ExecuteBashScript('deploy.sh', branch)
       SlackAlert("🎉 The deploy script has been executed successfully.")
-      return jsonify(payload)
+    return jsonify(payload)
     
 
 if __name__ == "__main__":
