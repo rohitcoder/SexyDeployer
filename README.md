@@ -12,6 +12,7 @@ Deploy this tool on same server, where you are hosting your source code and enab
 ```bash
   $ git clone https://github.com/rohitcoder/SexyDeployer
   $ cd SexyDeployer
+  $ screen
   $ source bin/activate
   $ apt install python3-pip
   $ pip3 install -r requirements.txt
